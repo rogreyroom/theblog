@@ -1,0 +1,10 @@
+{
+  "name": "theblog",
+  "version": "1.0.0",
+  "description": "A react redux simple blog application.",
+  "main": "./src/index.js",
+  "repository": "https://github.com/rogreyroom/theblog",
+  "author": "Robert Adamczewski <contact@adamczewski.me>",
+  "license": "MIT",
+  "private": false
+}

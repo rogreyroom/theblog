@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { postsActions } from '../../redux/posts/postsSlice'
 import { fetchCommentsData } from '../../redux/comments/commentsActions'
+import { fetchUsersData } from '../../redux/users/usersActions'
 
 const BlogList = () => {
   const { posts } = useSelector((state) => state.posts)
@@ -11,6 +12,7 @@ const BlogList = () => {
   useEffect(() => {
     if (posts.length > 0) {
       dispatch(fetchCommentsData())
+      dispatch(fetchUsersData())
     }
   }, [dispatch, posts])
 

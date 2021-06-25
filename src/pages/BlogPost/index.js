@@ -1,9 +1,17 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const BlogPost = () => {
-  const { id } = useParams()
-  return <h2>Blog post page - {id}</h2>
+  const { post } = useSelector((state) => state.posts)
+
+  if (!{}.hasOwnProperty.call(post, 'id')) return <h2>Loading...</h2>
+
+  return (
+    <>
+      <h2>{post.title}</h2>
+      <p>{post.body}</p>
+    </>
+  )
 }
 
 export default BlogPost

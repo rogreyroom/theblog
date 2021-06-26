@@ -2,7 +2,7 @@
   background-color: var(--c-accent);
   display: grid;
   grid-template-rows: clamp(var(--fs-text-large), 0.7212rem + 0.7692vw,  var(--fs-text-large)) auto;
-  grid-template-columns: clamp(17.75rem, -1.9821rem + 92.8571vw, 50.25);
+  grid-template-columns: clamp(17.75rem, -1.9821rem + 92.8571vw, 50.25rem);
   grid-template-areas: 'navigation' 'logo';
   grid-gap: 1rem 0;
   justify-items: end;

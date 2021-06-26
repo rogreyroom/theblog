@@ -12,12 +12,7 @@ const Home = () => {
     dispatch(fetchPhotosData())
   }, [dispatch])
 
-  return (
-    <>
-      <h2>Home page</h2>
-      <BlogList />
-    </>
-  )
+  return <BlogList />
 }
 
 export default Home

@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+
 import { useSelector, useDispatch } from 'react-redux'
-import { postsActions } from '../../redux/posts/postsSlice'
+
 import { fetchCommentsData } from '../../redux/comments/commentsActions'
 import { fetchUsersData } from '../../redux/users/usersActions'
+import PostCard from '../PostCard'
 
 const BlogList = () => {
   const { posts } = useSelector((state) => state.posts)
@@ -16,22 +17,20 @@ const BlogList = () => {
     }
   }, [dispatch, posts])
 
-  const setPostData = (id) => {
-    dispatch(postsActions.getPostById(id))
-  }
-
   if (posts.length === 0) return <h2>Loading...</h2>
 
   return (
     posts.length > 0 &&
     posts.map((post) => (
-      <Link
-        to={`blog/${post.id}`}
-        onClick={() => setPostData(post.id)}
-        key={post.id}
-      >
-        <h4>{post.title}</h4>
-      </Link>
+      <PostCard id={post.id} title={post.title} key={post.id} />
+      // // create separate component and then dispatch the fetch of thumbnail image
+      // <Link
+      //   to={`blog/${post.id}`}
+      //   onClick={() => setPostData(post.id)}
+      //   key={post.id}
+      // >
+      //   <h4>{post.title}</h4>
+      // </Link>
     ))
   )
 }

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap');
+
+:root {
+  @each $property, $value in $fonts {
+    --#{$property}: #{$value};
+  }
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}

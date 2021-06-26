@@ -6,12 +6,13 @@ import store from './redux/store'
 import NavBar from './components/NavBar'
 import Routes from './Router'
 import 'normalize.css'
-import './App.scss'
+import './styles/globals.scss'
+import classes from './App.module.scss'
 
 export const App = () => (
   <Router>
     <NavBar />
-    <main>
+    <main className={classes.main}>
       <Routes />
     </main>
   </Router>

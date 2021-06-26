@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import NavBar from './components/NavBar'
 import Routes from './Router'
+import 'normalize.css'
 import './App.scss'
 
 export const App = () => (

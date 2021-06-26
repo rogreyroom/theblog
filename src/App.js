@@ -8,6 +8,7 @@ import Routes from './Router'
 import 'normalize.css'
 import './styles/globals.scss'
 import classes from './App.module.scss'
+import Footer from './components/Footer'
 
 export const App = () => (
   <Router>
@@ -15,6 +16,7 @@ export const App = () => (
     <main className={classes.main}>
       <Routes />
     </main>
+    <Footer />
   </Router>
 )
 

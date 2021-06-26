@@ -1,0 +1,30 @@
+.card {
+  --border-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--c-grey-alpha);
+  border: solid 3px var(--border-color);
+  padding: var(--xs);
+  text-decoration: none;
+  transition: border-color linear .3s;
+  width: clamp(280px, 50%, 800px);
+
+  &__image {
+    margin: 0 var(--xs) 0 0;
+    max-width: clamp(var(--xxl), 1rem + 10vw, calc(var(--xxl) * 2));
+    max-height: clamp(var(--xxl), 1rem + 10vw, calc(var(--xxl) * 2));
+    width: 100%;
+  }
+
+  &__title {
+    color: var(--c-black);
+    font-size: clamp(var(--fs-text-small), 0.7212rem + 0.7692vw,  var(--fs-text-large));
+    margin: 0;
+  }
+
+  &:hover {
+    --border-color: var(--c-accent);
+  }
+}

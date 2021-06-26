@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import PropTypes from 'prop-types'
 import { photosActions } from '../../redux/photos/photosSlice'
 import { postsActions } from '../../redux/posts/postsSlice'
+import classes from './index.module.scss'
 
 const PostCard = ({ id, title }) => {
   const { photos, photo } = useSelector((state) => state.photos)
@@ -20,9 +21,17 @@ const PostCard = ({ id, title }) => {
   }
 
   return (
-    <Link to={`blog/${id}`} onClick={() => setPostData(id)}>
-      <img src={photo.thumbnailUrl} alt={photo.title} />
-      <h4>{title}</h4>
+    <Link
+      to={`blog/${id}`}
+      onClick={() => setPostData(id)}
+      className={classes.card}
+    >
+      <img
+        className={classes.card__image}
+        src={photo.thumbnailUrl}
+        alt={photo.title}
+      />
+      <p className={classes.card__title}>{title}</p>
     </Link>
   )
 }

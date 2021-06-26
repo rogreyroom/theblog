@@ -1,0 +1,27 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    color: var(--c-black);
+    font-size: clamp(var(--fs-header-small), 0.4483rem + 2.7586vw,  var(--fs-header-large));
+    margin: var(--normal) 0;
+
+    & span {
+      color: var(--c-grey);
+      font-size: clamp(var(--fs-text-small), 0.8060rem + 0.3448vw,  var(--fs-text-normal));
+    }
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+}

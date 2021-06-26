@@ -23,14 +23,6 @@ const BlogList = () => {
     posts.length > 0 &&
     posts.map((post) => (
       <PostCard id={post.id} title={post.title} key={post.id} />
-      // // create separate component and then dispatch the fetch of thumbnail image
-      // <Link
-      //   to={`blog/${post.id}`}
-      //   onClick={() => setPostData(post.id)}
-      //   key={post.id}
-      // >
-      //   <h4>{post.title}</h4>
-      // </Link>
     ))
   )
 }

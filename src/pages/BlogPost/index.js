@@ -4,6 +4,7 @@ import { commentsActions } from '../../redux/comments/commentsSlice'
 import { usersActions } from '../../redux/users/usersSlice'
 import { photosActions } from '../../redux/photos/photosSlice'
 import Post from '../../components/Post'
+import CommentForm from '../../components/CommentForm'
 import CommentsList from '../../components/CommentsList'
 
 const BlogPost = () => {
@@ -35,6 +36,7 @@ const BlogPost = () => {
         postTitle={post.title}
         postBody={post.body}
       />
+      <CommentForm post={post.id} />
       <CommentsList />
     </>
   )

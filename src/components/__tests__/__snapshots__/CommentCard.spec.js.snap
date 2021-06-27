@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentCard component renders the component 1`] = `
+<div>
+  <section
+    class="card"
+  >
+    <h4
+      class="card__title"
+    >
+      John
+    </h4>
+    <p
+      class="card__text"
+    >
+      Some nice comment about the post
+    </p>
+  </section>
+</div>
+`;

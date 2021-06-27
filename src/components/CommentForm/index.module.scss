@@ -1,0 +1,99 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	gap: clamp(var(--xs), 0.2241rem + 1.3793vw, var(--normal));
+	width: clamp(17.75rem, -1.9821rem + 92.8571vw, 50.25rem);
+
+	&__input,
+	&__textarea {
+		background-color: var(--c-accent);
+		font-family: inherit;
+		font-size: clamp(var(--fs-text-small), 0.8060rem + 0.3448vw, var(--fs-text-normal));
+		font-size: max(16px, 1em);
+		color: var(--c-black);
+		padding: 0.25em 0.5em;
+		border: none;
+		width: 100%;
+		cursor: pointer;
+		transition: 180ms box-shadow ease-in-out;
+		z-index: 2;
+
+		&:focus {
+			outline: 3px solid transparent;
+			box-shadow: 0 0 1px 2px var(--c-black);
+		}
+
+		&::placeholder {
+			color: var(--c-grey);
+			opacity: 1;
+		}
+
+		&::-moz-placeholder {
+			opacity: 1;
+		}
+
+		&:not(textarea) {
+			line-height: 1;
+			height: 2.25rem;
+		}
+
+		&[disabled] {
+			background-color: var(--c-grey-alpha);
+			color: var(--c-grey);
+			cursor: not-allowed;
+		}
+	}
+
+	&__textarea {
+		resize: none;
+		min-height: 100%;
+		width: 100%;
+		padding: var(--s);
+	}
+
+	&__button {
+		display: flex;
+		background: var(--c-black);
+		box-shadow: none;
+		color: var(--c-grey);
+		font-family: inherit;
+		text-align: center;
+		text-decoration: none;
+		border: none;
+		margin: 0;
+		padding: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		cursor: pointer;
+		transition: all 250ms ease-in-out;
+		justify-content: center;
+		align-items: center;
+
+		padding: var(--s) var(--xl);
+		min-width: 130px;
+		max-height: 40px;
+		width: max-content;
+
+		&:hover {
+			box-shadow: 0px 0px 2px var(--c-black), 0px -6px 4px var(--black-alpha);
+			color: var(--c-accent);
+		}
+
+		&:focus {
+			outline: 3px solid transparent;
+			box-shadow: 0 0 1px 2px var(--c-accent);
+			color: var(--c-accent);
+		}
+	}
+
+	&__error {
+		font-size: clamp(var(--fs-text-small), 0.8060rem + 0.3448vw, var(--fs-text-normal));
+		line-height: clamp(var(--fs-text-small), 0.8060rem + 0.3448vw, var(--fs-text-normal));
+		color: red;
+		position: relative;
+		margin: 0;
+		top: -4px;
+	}
+}

@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid 3px var(--c-accent);
+
+  &__title {
+    color: var(--c-black);
+    font-size: clamp(var(--fs-text-normal), 0.7212rem + 0.7692vw,  var(--fs-text-large));
+    display: block;
+    width: 100%;
+    background-color: var(--c-accent-alpha);
+    margin: 0;
+    padding: clamp(var(--xs), 0.2241rem + 1.3793vw, var(--normal));
+  }
+
+  &__text {
+    color: var(--c-black);
+    font-size: clamp(var(--fs-text-small), 0.7212rem + 0.7692vw,  var(--fs-text-large));
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: clamp(var(--xs), 0.2241rem + 1.3793vw, var(--normal));
+  }
+}

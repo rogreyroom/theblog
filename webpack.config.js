@@ -20,6 +20,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+        },
       },
       {
         test: /\.scss$/,
@@ -32,7 +35,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({ favicon: false, template: './src/index.html' }),
     new MiniCssExtractPlugin(),
   ],
 }

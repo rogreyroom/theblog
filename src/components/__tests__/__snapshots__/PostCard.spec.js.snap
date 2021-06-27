@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostCard component renders the component 1`] = `
+<div>
+  <a
+    class="card"
+    href="/blog/1"
+  >
+    <img
+      class="card__image"
+    />
+    <p
+      class="card__title"
+    >
+      Some cool title
+    </p>
+  </a>
+</div>
+`;

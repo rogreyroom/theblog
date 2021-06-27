@@ -1,5 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import CommentCard from '../CommentCard'
+import classes from './index.module.scss'
 
 const CommentsList = () => {
   const postComments = useSelector((state) => state.comments.postComments)
@@ -7,16 +9,20 @@ const CommentsList = () => {
   if (postComments.length === 0) return <h2>Loading...</h2>
 
   return (
-    <>
-      <h2>Comments - {postComments.length}</h2>
-      {postComments.length > 0 &&
-        postComments.map((comment) => (
-          <div key={comment.id}>
-            <h3>{comment.name}</h3>
-            <p>{comment.body}</p>
-          </div>
-        ))}
-    </>
+    <section className={classes.comments}>
+      <h2 className={classes.comments__title}>
+        Comments <span>/ {postComments.length} /</span>
+      </h2>
+      {postComments.length > 0 && (
+        <ul className={classes.comments__list}>
+          {postComments.map((comment) => (
+            <li className={classes.comments__item} key={comment.id}>
+              <CommentCard name={comment.name} body={comment.body} />
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
   )
 }
 

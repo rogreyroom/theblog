@@ -1,0 +1,38 @@
+/* Fonts */
+$fonts: (
+  ff-logo: ('Anton', sans-serif),
+  ff-body: ('Open Sans', sans-serif),
+  fw-normal: 400,
+  fs-base: 16px,
+  fs-text-large: 1.125rem,
+  fs-text-normal: 1rem,
+  fs-text-small: 0.875rem,
+  fs-header-large: 2rem,
+  fs-header-normal: 1.5rem,
+  fs-header-small: 1rem,
+  lh-base: 1.6,
+  lh-large: 2
+);
+
+/* Colors */
+$colors: (
+  c-accent: hsla(39, 96%, 56%, 100%),
+  c-accent-alpha: hsla(39,96%,56%, 15%),
+  c-black: hsla(24, 100%, 2%, 100%),
+  c-black-alpha: hsla(24, 100%, 2%, 25%),
+  c-grey: hsla(189, 7%, 62%, 100%),
+  c-grey-alpha: hsla(189, 7%, 62%, 10%),
+  c-white: hsla(0, 0%, 96%, 100%),
+);
+
+/* Sizes */
+$sizes: (
+  xxs: 0.25rem, // 4px
+  xs: 0.5rem, // 8px
+  s:  0.75rem, // 12px
+  normal: 1rem, // 16px
+  m: 1.125rem, // 18px
+  l: 1.5rem, // 24px
+  xl: 2rem, // 32px
+  xxl: 3rem, // 48px
+);

@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  background-color: var(--c-black);
+  margin: clamp(var(--m), 0.0905rem + 5.1724vw, var(--xxl)) 0 0 0;
+  padding: clamp(var(--xs), 0.2241rem + 1.3793vw, var(--normal));
+
+  &__text {
+    color: var(--c-grey);
+    font-size: clamp(var(--fs-text-small), 0.8060rem + 0.3448vw,  var(--fs-text-normal));
+    margin: 0;
+  }
+}

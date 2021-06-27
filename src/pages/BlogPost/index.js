@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { commentsActions } from '../../redux/comments/commentsSlice'
 import { usersActions } from '../../redux/users/usersSlice'
-import CommentsList from '../../components/CommentsList'
 import { photosActions } from '../../redux/photos/photosSlice'
+import Post from '../../components/Post'
+import CommentForm from '../../components/CommentForm'
+import CommentsList from '../../components/CommentsList'
 
 const BlogPost = () => {
   const { post } = useSelector((state) => state.posts)
@@ -19,17 +21,23 @@ const BlogPost = () => {
     }
   }, [dispatch, post])
 
-  if (!{}.hasOwnProperty.call(post, 'id')) return <h2>Loading...</h2>
+  if (
+    !{}.hasOwnProperty.call(post, 'id') ||
+    !{}.hasOwnProperty.call(user, 'name')
+  )
+    return <h2>Loading...</h2>
 
   return (
     <>
-      <img src={photo.url} alt={photo.title} />
-      <span>{user.name}</span>
-      <h2>{post.title}</h2>
-      <p>{post.body}</p>
-      <div>
-        <CommentsList />
-      </div>
+      <Post
+        userName={user.name}
+        photoUrl={photo.url}
+        photoTitle={photo.title}
+        postTitle={post.title}
+        postBody={post.body}
+      />
+      <CommentForm post={post.id} />
+      <CommentsList />
     </>
   )
 }

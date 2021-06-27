@@ -1,0 +1,6 @@
+/* Global */
+:root {
+  @each $property, $value in $sizes {
+    --#{$property}: #{$value};
+  }
+}

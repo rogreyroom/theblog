@@ -20,20 +20,6 @@
 		"test:watch": "jest --watch --updateSnapshot",
 		"test:coverage": "jest --coverage"
 	},
-	"jest": {
-		"setupFilesAfterEnv": [
-			"@testing-library/jest-dom/extend-expect",
-			"<rootDir>/setupTests.js"
-		],
-		"moduleNameMapper": {
-			"\\.(css|scss|less)$": "identity-obj-proxy"
-		},
-		"testPathIgnorePatterns": [
-			"<rootDir>/node_modules",
-			"<rootDir>/.history",
-			"<rootDir>/dist"
-		]
-	},
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.6.0",
 		"gh-pages": "^3.2.3",

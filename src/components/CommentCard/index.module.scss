@@ -4,7 +4,6 @@
   justify-content: flex-start;
   align-items: center;
   border: solid 3px var(--c-accent);
-  width: clamp(280px, 50%, 800px);
 
   &__title {
     color: var(--c-black);

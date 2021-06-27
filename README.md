@@ -4,6 +4,8 @@ It is a simple blog app that displays posts from <https://jsonplaceholder.typico
 
 ## Application 🚀
 
+To run the app go to the [rogreyroom.github.io/theblog/](https://rogreyroom.github.io/theblog/)
+
 ## Installation
 
   ```bash

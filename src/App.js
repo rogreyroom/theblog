@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import { Provider, useDispatch } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
 import store from './redux/store'
@@ -11,18 +11,27 @@ import 'normalize.css'
 import './styles/globals.scss'
 import classes from './App.module.scss'
 import Footer from './components/Footer'
+import { fetchPostsData } from './redux/posts/postsActions'
 
 const persistor = persistStore(store)
 
-export const App = () => (
-  <Router>
-    <NavBar />
-    <main className={classes.main}>
-      <Routes />
-    </main>
-    <Footer />
-  </Router>
-)
+export const App = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchPostsData())
+  }, [dispatch])
+
+  return (
+    <Router>
+      <NavBar />
+      <main className={classes.main}>
+        <Routes />
+      </main>
+      <Footer />
+    </Router>
+  )
+}
 
 ReactDOM.render(
   <Provider store={store}>
